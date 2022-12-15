@@ -14,6 +14,7 @@ export type CityType = {
 }
 
 export type HouseType = {
+    id?:number
     buildedAt: number
     repaired: boolean
     address: AddressType
@@ -31,22 +32,13 @@ export type StreetType = {
 
 }
 
-export const addMoneyToBudget = (building: GovernmentBuildingType, budget: number) => {
-    building.budget += budget
+
+export function demolishHousesOnTheStreet(city: CityType, street: string){
+    city.houses=city.houses.filter(h=>h.address.street.title !== street)
 
 }
 
+export function getBuildingsWithStaffCountGreaterThen(governmentBuildings: Array<GovernmentBuildingType>, number: number){
+    return governmentBuildings.filter(b=>b.staffCount>number)
 
-export const repairHouse= (houseType: HouseType)=>{
-houseType.repaired=true
 }
-
-export const toFireStaff = (building: GovernmentBuildingType, stafToFire: number)=>{
-
-    building.staffCount -= stafToFire
-}
-
-export function toHireStaff(building: GovernmentBuildingType, number: number){
-    building.staffCount += number
-}
-
