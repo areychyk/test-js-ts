@@ -18,6 +18,8 @@ type PropsType = {
 }
 
 export const MenComponent: React.FC<PropsType> = ({title,man}) => {
+
+    // const {title,man}=props //// одно и тоже
     return <div>
         <h1>{title}</h1>
         <hr/>
