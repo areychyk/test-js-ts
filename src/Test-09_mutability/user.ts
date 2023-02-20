@@ -5,6 +5,6 @@ let user={
 }
 
 
-function icreaseAge(user:any){
-    user.age++
-}
+// function icreaseAge(user:any){
+//     user.age++
+// }

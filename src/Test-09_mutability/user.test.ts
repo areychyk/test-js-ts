@@ -1,6 +1,6 @@
-function icreaseAge(u: UserType) {
-    u.age++
-}
+// function icreaseAge(u: UserType) {
+//     u.age++
+// }
 
 type UserType = {
     name: string
@@ -13,14 +13,14 @@ test('reference type test', () => {
         age: 25
     }
 
-    icreaseAge(user)
+    // icreaseAge(user)
 
     expect(user.age).toBe(26)
 
     const newUser = user
     newUser.age = 1000
     expect(user.age).toBe(1000)
-    icreaseAge(user)
+    // icreaseAge(user)
     expect(user.age).toBe(1001)
 
 })
